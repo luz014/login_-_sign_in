@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../services/auth-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  menu = [
+    { url: "/", content: "HOME"},
+    { url: "/register", content: "Registrarse"}
+  ]
+}
