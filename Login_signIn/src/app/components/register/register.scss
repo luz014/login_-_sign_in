@@ -1,46 +1,137 @@
+// .form-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background: #0f172a;
+// }
+
+// .form-box {
+//   background: #1e293b;
+//   padding: 2rem;
+//   border-radius: 12px;
+//   width: 300px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+// }
+
+// h1 {
+//   text-align: center;
+//   color: #facc15;
+//   margin-bottom: 1.5rem;
+// }
+
+// input {
+//   width: 100%;
+//   padding: 10px;
+//   margin-bottom: 10px;
+//   border: none;
+//   border-radius: 6px;
+//   outline: none;
+// }
+
+// button {
+//   width: 100%;
+//   padding: 10px;
+//   background: #facc15;
+//   border: none;
+//   border-radius: 6px;
+//   cursor: pointer;
+//   font-weight: bold;
+// }
+
+// small {
+//   color: #f87171;
+//   display: block;
+//   margin-bottom: 10px;
+// }
+
+// Que mamada es esa Isaac, 'ta todo feo
+
+// Matate :(
+
+// KJASKJASJASJKAJS
+
+$bg-main: #1e293b;
+$bg-card: #334155;
+$bg-input: #475569;
+$accent: #38bdf8;
+$text-main: #e2e8f0;
+$text-muted: #94a3b8;
+$error: #f87171;
+$success: #5f54f7;
+
 .form-container {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #0f172a;
+  background: $bg-main;
 }
 
 .form-box {
-  background: #1e293b;
+  width: 100%;
+  max-width: 22rem;
   padding: 2rem;
-  border-radius: 12px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  background: $bg-card;
+  border-radius: 1rem;
+  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-h1 {
-  text-align: center;
-  color: #facc15;
+h1, h2 {
+  color: $text-main;
   margin-bottom: 1.5rem;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
   border: none;
-  border-radius: 6px;
+  background: $bg-input;
+  color: $text-main;
   outline: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    border: 0.1rem solid $accent;
+    box-shadow: 0 0 0.3rem $accent;
+  }
 }
 
 button {
   width: 100%;
-  padding: 10px;
-  background: #facc15;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  background: $accent;
+  color: #0f172a;
   font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: 0.2s;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 }
 
 small {
-  color: #f87171;
   display: block;
-  margin-bottom: 10px;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  color: $error;
+}
+
+.success {
+  color: $success;
 }
