@@ -21,7 +21,7 @@ export class Login {
     if (success) {
       this.router.navigate(['/dashboard']);
     } else {
-      this.errorMessage = 'Credenciales incorrectas';
+      this.errorMessage = 'No esta bien el correo o la contraseña';
     }
   }
 }
