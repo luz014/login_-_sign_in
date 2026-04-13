@@ -1,5 +1,35 @@
-<nav>
-  <a routerLink="/login">Login</a>
-  <a routerLink="/dashboard">Dashboard</a>
-  <button (click)="logout()">Logout</button>
+<nav class="navbar">
+
+  <div class="navbar-nav">
+
+    @if (!authService.isAuthenticated()) {
+
+      @for (item of guestMenu; track item.url) {
+        <a 
+          class="nav-link"
+          [routerLink]="item.url"
+          routerLinkActive="active">
+          {{ item.content }}
+        </a>
+      }
+
+    }
+
+    @if (authService.isAuthenticated()) {
+
+      @for (item of userMenu; track item.url) {
+        <a 
+          class="nav-link"
+          [routerLink]="item.url"
+          routerLinkActive="active">
+          {{ item.content }}
+        </a>
+      }
+
+      <button (click)="logout()">Logout</button>
+
+    }
+
+  </div>
+
 </nav>

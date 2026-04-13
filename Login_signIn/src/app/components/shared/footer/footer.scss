@@ -1,0 +1,11 @@
+$bg-footer: #0f172a;
+$text: #94a3b8;
+
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: $bg-footer;
+  text-align: center;
+  color: $text;
+  font-size: 0.8rem;
+}

@@ -1,1 +1,9 @@
-<button (click)="logout()">Cerrar Sesión</button>
+<div class="dashboard-container">
+
+  <h1>Dashboard</h1>
+
+  @if (user) {
+    <p>Bienvenido, {{ user.username }}</p>
+  }
+
+</div>
