@@ -1,9 +1,8 @@
 $bg-main: #1e293b;
 $text-main: #e2e8f0;
 
-// 🔥 Contenedor principal
 .dashboard-container {
-  min-height: calc(100vh - 6rem); // 👈 ajusta según altura header+footer
+  min-height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
