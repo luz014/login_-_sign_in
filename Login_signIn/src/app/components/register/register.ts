@@ -30,7 +30,7 @@ export class Register {
 
     this.registerForm.reset();
     this.submitted = false;
-  }
+  }  
 
   get f() {
     return this.registerForm.controls;
